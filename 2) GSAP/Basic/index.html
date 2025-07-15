@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP animation</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        height: 100vh;
+        width: 100vw;
+        padding: 40px;
+    }
+    /* #box {
+        background-color: #464699;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px;
+    }
+    
+    #box1 {
+        background-color: #791c1c;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px;
+    }
+    #box2 {
+        background-color: #195f19;
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px;
+        position: sticky;
+    } */
+
+    .box1 {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: blueviolet;
+    }
+    .box2 {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: darkgreen;
+    }
+    .box3 {
+        height: 100px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: coral;
+    }
+</style>
+<body>
+
+    <!-- <div id="box"></div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div> -->
+    <!-- <h1>Hi! there, Welcome</h1>
+    <h1>I am Shrey Vats The cretor</h1>
+    <h1>I am present into 4 dimenstion and watch every one </h1> -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var tl = gsap.timeline()
+        // gsap.to("#box", {
+        //     x: 800,
+        //     duration: 3
+        // })
+        // gsap.from("#box1", {
+        //     x: 800,
+        //     duration: 3
+        // })
+        // gsap.from("#box2", { 
+        //     rotation: 360, x: 100, yPercent: 50, duration: 3 
+        // })
+
+        // gsap.from("h1", {
+        //     opacity: 0,
+        //     duration: 1,
+        //     delay: 1,
+        //     y: 30,
+        //     stagger:0.3
+        // })
+        // gsap.from("h1",{
+        //     x: -150,
+        //     duration: 0.7,
+        //     delay: 0.5,
+        //     opacity: 0,
+        //     stagger: 0.3
+        // })
+        tl.to(".box1", {
+            x:1200,
+            rotation: 360,
+            duration: 1.5,
+            delay: 1,         
+        })
+        tl.to(".box2", {
+            x:1200,
+            skew: 40,
+            duration: 1.5,
+                    
+        })
+        tl.to(".box3", {
+            x:1200,
+            borderRadius: "50% 50%",
+            duration: 1.5,
+                     
+        })
+    </script>
+</body>
+</html>
