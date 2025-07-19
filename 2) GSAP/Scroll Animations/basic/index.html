@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #page1 {
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #page2 {
+            height: 100%;
+            width: 100%;
+            background-color: #77cbe7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #page3 {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(51, 179, 222);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page1">
+        <div class="box"></div>
+    </div>
+    <div id="page2">
+        <div class="box"></div>
+    </div>
+    <div id="page3">
+        <div class="box"></div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.from("#page1 .box", {
+            rotate: 960,
+            duration: 3,
+            opacity: 50,
+            scale: 0.5
+        })
+        gsap.from("#page2 .box", {
+            rotate: 960,
+            duration: 3,
+            opacity: 50,
+            scale: 0.5,
+            scrollTrigger: "#page2 .box"
+        })
+        gsap.from("#page3 .box", {
+            rotate: 960,
+            duration: 3,
+            opacity: 50,
+            scale: 0.5
+        })
+    </script>
+</body>
+</html>
